@@ -2,45 +2,99 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AddSpot_API.Models;
 using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace AddSpot_API.Controllers
 {
     [Route("api/[controller]")]
     public class AdvertisementController : Controller
     {
-        // GET: api/values
+        private readonly AdvertisementContext _context;
+
+        public AdvertisementController(AdvertisementContext context)
+        {
+            _context = context;
+
+            //if (_context.Adverts.Count() <= 0)
+            //{
+            //    _context.Adverts.Add(new Advertisement()
+            //    {
+                    
+            //    });
+            //    _context.SaveChanges();
+            //}
+        }
+
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Advertisement> GetAll()
         {
-            return new string[] { "value1", "value2" };
+            return _context.Adverts.ToList();
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{id}", Name = "GetAdvert")]
+        public IActionResult GetById(long id)
         {
-            return "value";
+            var item = _context.Adverts.FirstOrDefault(t => t.Id == id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(item);
         }
 
-        // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Create([FromBody] Advertisement advert)
         {
+            if (advert == null)
+                return BadRequest();
+            _context.Adverts.Add(advert);
+            _context.SaveChanges();
+
+            return CreatedAtRoute("GetAdvert", new { id = advert.Id }, advert);
         }
 
-        // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public IActionResult Update(long id, [FromBody] Advertisement updatedAdvert)
         {
+            if (updatedAdvert == null || updatedAdvert.Id != id)
+                return BadRequest();
+
+            var currentAdvert = _context.Adverts.FirstOrDefault(t => t.Id == id);
+            if (currentAdvert == null)
+                return NotFound();
+
+            currentAdvert.AddedFromLat = updatedAdvert.AddedFromLat;
+            currentAdvert.AddedFromLong = updatedAdvert.AddedFromLong;
+            currentAdvert.DateAdded = updatedAdvert.DateAdded;
+            currentAdvert.DestLat = updatedAdvert.DestLat;
+            currentAdvert.DestLong = updatedAdvert.DestLong;
+            currentAdvert.MateAccepted = updatedAdvert.MateAccepted;
+            currentAdvert.MateId = updatedAdvert.MateId;
+            currentAdvert.OwnerAccepted = updatedAdvert.OwnerAccepted;
+            currentAdvert.OwnerId = updatedAdvert.OwnerId;
+            currentAdvert.RequiredAge = updatedAdvert.RequiredAge;
+            currentAdvert.RequiredSex = updatedAdvert.RequiredSex;
+            currentAdvert.State = updatedAdvert.State;
+            currentAdvert.TripDate = updatedAdvert.TripDate;
+
+            _context.Adverts.Update(currentAdvert);
+            _context.SaveChanges();
+
+            return new NoContentResult();
         }
 
-        // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(long id)
         {
+            var advert = _context.Adverts.FirstOrDefault(t => t.Id == id);
+            if (advert == null)
+                return NotFound();
+
+            _context.Adverts.Remove(advert);
+            _context.SaveChanges();
+
+            return new NoContentResult();
         }
     }
 }
