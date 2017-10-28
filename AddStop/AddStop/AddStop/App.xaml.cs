@@ -13,7 +13,7 @@ namespace AddStop
 		{
 			InitializeComponent();
 
-			MainPage = new AddStop.MainPage();
+			MainPage = new AddStop.Home();
 		}
 
 		protected override void OnStart ()
