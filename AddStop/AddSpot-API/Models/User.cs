@@ -1,7 +1,7 @@
 ﻿using System;
 namespace AddSpot_API.Models
 {
-    class User
+    public class User
     {
         public long Id { get; set; }
         public string Login { get; set; }
