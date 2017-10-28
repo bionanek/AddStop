@@ -12,13 +12,12 @@ namespace AddStop.ViewModels
 
         public HomeViewModel()
         {
-            IsVisableLoading = new List<Page>() { new Page(), new Page(), new Page() };
         }
 
 
-        private List<Page> _isVisableLoading;
+        private bool _isVisableLoading;
 
-        public List<Page> IsVisableLoading
+        public bool IsVisableLoading
         {
             get { return _isVisableLoading; }
             set
