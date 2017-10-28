@@ -6,18 +6,4 @@
     <TabbedPage.BindingContext>
         <viewModel:HomeViewModel/>
     </TabbedPage.BindingContext>
-    
-  <!--Pages can be added as references or inline-->
-  <ContentPage Title="Tab 1">
-      
-  </ContentPage>
-    
-  <ContentPage Title="Tab 2">
-      
-  </ContentPage>
-    
-  <ContentPage Title="Tab 3">
-      
-  </ContentPage>
-    
 </TabbedPage>
