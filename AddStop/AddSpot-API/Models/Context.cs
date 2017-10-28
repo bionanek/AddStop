@@ -2,12 +2,14 @@
 using Microsoft.EntityFrameworkCore;
 namespace AddSpot_API.Models
 {
-    public class AdvertisementContext : DbContext
+    public class Context : DbContext
     {
-        public AdvertisementContext(DbContextOptions<AdvertisementContext> options)
+        public Context(DbContextOptions<Context> options)
                 : base(options)
         {
         }
+
         public DbSet<Advertisement> Adverts { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

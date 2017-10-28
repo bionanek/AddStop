@@ -10,9 +10,9 @@ namespace AddSpot_API.Controllers
     [Route("api/[controller]")]
     public class AdvertisementController : Controller
     {
-        private readonly AdvertisementContext _context;
+        private readonly Context _context;
 
-        public AdvertisementController(AdvertisementContext context)
+        public AdvertisementController(Context context)
         {
             _context = context;
 
@@ -93,6 +93,15 @@ namespace AddSpot_API.Controllers
 
             _context.Adverts.Remove(advert);
             _context.SaveChanges();
+
+            return new NoContentResult();
+        }
+
+        [HttpPost("{userId}/{advertId}", Name="JoinToAdvert")]
+        public IActionResult JoinToAdvert(long userId, long advertId)
+        {
+            _context.Users.FirstOrDefault(f => f.Id == userId);
+            var advert = new Advertisement() { Id = advertId };
 
             return new NoContentResult();
         }
