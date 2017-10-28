@@ -46,6 +46,53 @@ namespace AddSpot_API.Controllers
             return new ObjectResult(item);
         }
 
+        [HttpPost]
+        public IActionResult Create([FromBody] User user)
+        {
+            if (user == null)
+                return BadRequest();
+            _context.Users.Add(user);
+            _context.SaveChanges();
+
+            return CreatedAtRoute("GetUser", new { id = user.Id }, user);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Update(long id, [FromBody] User updatedUser)
+        {
+            if (updatedUser == null || updatedUser.Id != id)
+                return BadRequest();
+
+            var currentUser = _context.Users.FirstOrDefault(t => t.Id == id);
+            if (currentUser == null)
+                return NotFound();
+
+            currentUser.Login = updatedUser.Login;
+            currentUser.Password = updatedUser.Password;
+            currentUser.Name = updatedUser.Name;
+             currentUser.Surname = updatedUser.Surname;
+
+            _context.Users.Update(currentUser);
+            _context.SaveChanges();
+
+            return new NoContentResult();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(long id)
+        {
+            var user = _context.Users.FirstOrDefault(t => t.Id == id);
+            if (user == null)
+                return NotFound();
+
+            _context.Users.Remove(user);
+            _context.SaveChanges();
+
+            return new NoContentResult();
+        }
+
+
+
         //// GET: api/values
         //[HttpGet]
         //public IEnumerable<string> Get()
