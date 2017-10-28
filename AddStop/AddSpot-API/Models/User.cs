@@ -8,5 +8,6 @@ namespace AddSpot_API.Models
         public string Password { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
+        public double Rating { get; set; }
     }
 }
