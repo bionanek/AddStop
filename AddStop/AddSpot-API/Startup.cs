@@ -29,7 +29,7 @@ namespace AddSpot_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<UserContext>(opt => opt.UseInMemoryDatabase("User"));
+            services.AddDbContext<Context>(opt => opt.UseInMemoryDatabase("User"));
             services.AddMvc();
         }
 

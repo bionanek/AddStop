@@ -13,7 +13,6 @@ namespace AddStop
 		{
 			InitializeComponent();
 
-
 			MainPage = new LoginView();
 		}
 
