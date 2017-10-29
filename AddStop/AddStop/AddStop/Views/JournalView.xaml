@@ -3,13 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AddStop.Views.JournalView"
              Title="Journal" xmlns:viewModel="clr-namespace:AddStop.ViewModels">
-    <ContentPage.BindingContext>
-        <viewModel:JournalViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
+    <AbsoluteLayout>
         <StackLayout>
             <Label Text="this is journal page" />
             <Label Text="{Binding test}" />
         </StackLayout>
-    </ContentPage.Content>
+        <StackLayout BackgroundColor="#b7212c" Orientation="Horizontal" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 1, -1, -1" IsVisible="True">
+        <Label FontSize="20"  TextColor="White" Text="You are currently in trip:"/>
+        <Switch />
+    </StackLayout>
+    </AbsoluteLayout>
 </ContentPage>

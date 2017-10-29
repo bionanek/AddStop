@@ -3,31 +3,36 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace AddStop.ViewModels
 {
-    class MyAdvertisementsViewModel : INotifyPropertyChanged
+    class MyAdvertisementsUsers : INotifyPropertyChanged
     {
-        public INavigation Navigation { get; set; }
 
-        public MyAdvertisementsViewModel(INavigation nav)
+        public MyAdvertisementsUsers()
         {
-            this.Navigation = nav;
         }
 
-        private string _test;
 
-        public string test
+        public Command SendMessageCommand
         {
-            get { return _test; }
-            set
+            get
             {
-                _test = value;
-                OnPropetyChanged();
+                return new Command(async () =>
+                {
+                    try
+                    {
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+                });
             }
         }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 

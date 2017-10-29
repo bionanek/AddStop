@@ -2,14 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AddStop.Views.MyAdvertisementsView"
-             Title="My Advertisements" xmlns:viewModel="clr-namespace:AddStop.ViewModels">
-    <ContentPage.BindingContext>
-        <viewModel:MyAdvertisementsViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="MyAdvertisements page" />
-            <Label Text="{Binding test}" />
-        </StackLayout>
-    </ContentPage.Content>
+             Title="My Advertisements" xmlns:viewModel="clr-namespace:AddStop.ViewModels"
+             xmlns:customControlls="clr-namespace:AddStop.CustomControlls;assembly=AddStop.Android">
+    
+    <ListView x:Name="listView" SeparatorVisibility="None" HasUnevenRows="True" VerticalOptions="FillAndExpand">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <customControlls:AdvertisementCell />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    
+   
 </ContentPage>

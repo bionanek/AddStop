@@ -9,8 +9,8 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="this is map page" />
-            <Label Text="{Binding test}" />
+            <Button Text="Pin your spot" TextColor="White" BackgroundColor="#167C5D" HorizontalOptions="FillAndExpand" />
+            <Button Text="Check popular spots" TextColor="White" BackgroundColor="#167C5D" HorizontalOptions="FillAndExpand"/>
             <maps:Map
             x:Name="MyMap"
             IsShowingUser="true"

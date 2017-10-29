@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AddStop.CustomControlls.ViewCellUser">
+  <ViewCell.View>
+      <StackLayout Margin="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding src}" Grid.Column="0" Aspect="AspectFit"/>
+                <StackLayout Grid.Column="1">
+                    <Label Text="Login:" FontSize="10" TextColor="Black"/>
+                    <Label Text="{Binding login}" HorizontalTextAlignment="Center" FontSize="16"  TextColor="Black"/>
+                    <Label Text="Surname:" FontSize="10" TextColor="Black"/>
+                    <Label Text="{Binding Surname}" HorizontalTextAlignment="Center" FontSize="16"  TextColor="Black"/>
+                    <Label Text="Name:" FontSize="10" TextColor="Black"/>
+                    <Label Text="{Binding Name}" HorizontalTextAlignment="Center" FontSize="16"  TextColor="Black"/>
+                    <Label Text="Age:" FontSize="10" TextColor="Black"/>
+                    <Label Text="{Binding Age}" HorizontalTextAlignment="Center" FontSize="16"  TextColor="Black"/>
+                    <Button Text="Send message"  FontSize="24"  TextColor="White" BackgroundColor="#167C5D" Clicked="Button_OnClicked"/>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+  </ViewCell.View>
+</ViewCell>

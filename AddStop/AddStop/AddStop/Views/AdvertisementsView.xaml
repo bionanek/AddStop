@@ -5,13 +5,11 @@
              Title="Advertisements"
              xmlns:viewModel="clr-namespace:AddStop.ViewModels"
              xmlns:controls="clr-namespace:AddStop.CustomControlls">
-    <ContentPage.Content>
-        <ListView x:Name="listView" SeparatorVisibility="None" HasUnevenRows="True" VerticalOptions="FillAndExpand">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <controls:AdvertisementCell />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </ContentPage.Content>
+    <ListView x:Name="listView" SeparatorVisibility="None" HasUnevenRows="True" VerticalOptions="FillAndExpand">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <controls:AdvertisementCellSerch />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>

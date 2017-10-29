@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customControlls="clr-namespace:AddStop.CustomControlls;assembly=AddStop.Android"
+             x:Class="AddStop.Views.MessagePageView">
+    <StackLayout VerticalOptions="EndAndExpand">
+    <customControlls:ListViewCustom x:Name="listView" SeparatorVisibility="None" HasUnevenRows="True" VerticalOptions="FillAndExpand">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <customControlls:MessageCell />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </customControlls:ListViewCustom>
+        <StackLayout Orientation="Horizontal">
+            <Entry Placeholder="Your message" HorizontalOptions="StartAndExpand"/><Button Text="Send" HorizontalOptions="End"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
