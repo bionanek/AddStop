@@ -21,7 +21,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Advertisement.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AdvertisementsViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BackpackViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HomeViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\JournalViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginViewModel.cs" />
@@ -30,10 +29,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RegistrationViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\AdvertisementsView.xaml.cs">
       <DependentUpon>AdvertisementsView.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\BackpackView.xaml.cs">
-      <DependentUpon>BackpackView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\Home.xaml.cs">
@@ -60,6 +55,9 @@
       <DependentUpon>RegistrationView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PersonType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Questions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Survey.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
@@ -85,12 +83,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MyAdvertisementsView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BackpackView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

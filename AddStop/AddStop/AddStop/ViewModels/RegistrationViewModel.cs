@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using AddStop.Models;
 
 namespace AddStop.ViewModels
 {
     class RegistrationViewModel : INotifyPropertyChanged
     {
+        private List<Questions> questions {get;set;}
+        private User User { get; set; }
+        private Survey Survey { get; set; }
+
         public RegistrationViewModel()
         {
             test = "test";

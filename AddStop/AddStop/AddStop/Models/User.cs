@@ -12,5 +12,6 @@ namespace AddStop.Models
         public string Name { get; set; }
         public string Surname { get; set; }
         public double Rating { get; set; }
+        public PersonType PersonType { get; set; }
     }
 }
