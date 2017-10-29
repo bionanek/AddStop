@@ -9,9 +9,12 @@ namespace AddStop.ViewModels
 {
     class HomeViewModel : INotifyPropertyChanged
     {
+        public INavigation Navigation { get; set; }
 
-        public HomeViewModel()
+        public HomeViewModel(INavigation nav)
         {
+            this.Navigation = nav;
+
         }
 
 

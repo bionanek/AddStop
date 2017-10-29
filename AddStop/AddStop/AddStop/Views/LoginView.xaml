@@ -2,14 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AddStop.Views.LoginView"
-             Title="Login" xmlns:viewModel="clr-namespace:AddStop.ViewModels">
-    <ContentPage.BindingContext>
-        <viewModel:LoginViewModel/>
-    </ContentPage.BindingContext>
+             Title="Login" xmlns:viewModel="clr-namespace:AddStop.ViewModels" BackgroundImage="bg.png">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="this is login page" />
-            <Label Text="{Binding test}" />
+        <StackLayout Orientation="Vertical" Margin="10" >
+            <Label Text="AddStop" TextColor="Black" FontSize="80" HorizontalTextAlignment="Center" VerticalTextAlignment="Start">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android">head.ttf#The Black Box</On>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <Entry Text="{Binding login, Mode=TwoWay}" Placeholder="login" FontSize="18" Margin="0,0,120,0" />
+            <Entry Text="{Binding password, Mode=TwoWay}" Placeholder="password" FontSize="18" IsPassword="True" Margin="0,0,120,0"/>
+            <Button Text="Login" BackgroundColor="White" TextColor="#757575" HorizontalOptions="Start" Opacity="{Binding opacity}" Command="{Binding SignIn}"/>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Button Text="Sign in with Facebook" BackgroundColor="#3b5998" TextColor="White"/>
+                <Button Text="Sign in with Google" BackgroundColor="White" TextColor="#757575"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

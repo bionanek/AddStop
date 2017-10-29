@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using AddStop.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,7 +14,9 @@ namespace AddStop.Views
 	{
 		public LoginView ()
 		{
-			InitializeComponent ();
+		    this.BindingContext = new LoginViewModel(Navigation);
+            InitializeComponent ();
+            
 		}
 	}
 }

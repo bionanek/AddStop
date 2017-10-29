@@ -12,6 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AdvertisementsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ArchivesViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BackpackViewModel.cs" />
@@ -65,7 +66,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
   </ItemGroup>

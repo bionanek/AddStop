@@ -100,6 +100,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\Fluo Gums.ttf" />
+    <AndroidAsset Include="Assets\head.ttf" />
+    <AndroidAsset Include="Assets\Skranji-Bold.ttf" />
+    <AndroidAsset Include="Assets\Skranji-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
@@ -114,6 +118,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\bg.png" />
   </ItemGroup>
   <Import Project="..\AddStop\AddStop.projitems" Label="Shared" Condition="Exists('..\AddStop\AddStop.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
