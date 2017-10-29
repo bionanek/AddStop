@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AddStop.CustomControlls.AdvertisementCell">
     <ViewCell.View>
-        <ContentView Margin="10,10,10,20" BackgroundColor="#f0e6a1">
+        <ContentView Margin="10,10,10,20" BackgroundColor="#f0e7a2" Opacity="0.8">
             <ContentView Margin="10">
                 <Grid RowSpacing="5" ColumnSpacing="5">
                     <Grid.RowDefinitions>
@@ -55,7 +55,7 @@
                             <Label Text="Required age:" FontSize="10" TextColor="Black"/>
                                 <Label Text="{Binding RequiredAge}" HorizontalTextAlignment="Center"  FontSize="16"  TextColor="Black"/>
                         </StackLayout>
-                        <Button Text="Sign in" Grid.Column="1" FontSize="24"  TextColor="Black" BackgroundColor="White"/>
+                            <Button  Text="Sign in" Grid.Column="1" FontSize="24"  TextColor="White" BackgroundColor="#167C5D"/>
                         </Grid>
                     </StackLayout>
                 </Grid>

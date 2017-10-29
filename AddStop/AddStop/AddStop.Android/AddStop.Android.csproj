@@ -138,6 +138,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\bg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\star.png" />
+  </ItemGroup>
   <Import Project="..\AddStop\AddStop.projitems" Label="Shared" Condition="Exists('..\AddStop\AddStop.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

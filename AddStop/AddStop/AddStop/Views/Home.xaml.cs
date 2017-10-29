@@ -21,11 +21,9 @@ namespace AddStop
             BindingContext = new HomeViewModel(Navigation);
 
             this.Children.Add(new AdvertisementsView(this.Navigation));
-            this.Children.Add(new ArichivesView());
-            this.Children.Add(new MyAdvertisementsView());
+            this.Children.Add(new MyAdvertisementsView(this.Navigation));
             this.Children.Add(new JournalView());
             this.Children.Add(new MapView());
-            this.Children.Add(new BackpackView());
         }
     }
 }

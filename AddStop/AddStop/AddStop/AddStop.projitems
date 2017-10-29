@@ -21,7 +21,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Advertisement.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AdvertisementsViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ArchivesViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BackpackViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HomeViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\JournalViewModel.cs" />
@@ -31,10 +30,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RegistrationViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\AdvertisementsView.xaml.cs">
       <DependentUpon>AdvertisementsView.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\ArchivesView.xaml.cs">
-      <DependentUpon>ArchivesView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\BackpackView.xaml.cs">
@@ -90,12 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MyAdvertisementsView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ArchivesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
