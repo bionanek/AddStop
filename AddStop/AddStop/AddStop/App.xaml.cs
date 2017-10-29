@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using AddStop.Views;
-using Android.Content.Res;
 using Xamarin.Forms;
 
 namespace AddStop
