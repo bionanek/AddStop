@@ -7,8 +7,8 @@ namespace AddSpot_API.Models
     public class Advertisement
     {
         public long Id { get; set; }
-        public User OwnerId { get; set; }
-        public User MateId { get; set; }
+        public User Owner { get; set; }
+        public User Mate { get; set; }
         public decimal DestLat { get; set; }
         public decimal DestLong { get; set; }
 
