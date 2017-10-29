@@ -3,14 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AddStop.Views.AdvertisementsView"
              Title="Advertisements"
-             xmlns:viewModel="clr-namespace:AddStop.ViewModels">
-    <ContentPage.BindingContext>
-        <viewModel:AdvertisementsViewModel/>
-    </ContentPage.BindingContext>
+             xmlns:viewModel="clr-namespace:AddStop.ViewModels"
+             xmlns:controls="clr-namespace:AddStop.CustomControlls">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="this is advertisements page"/>
-            <Label Text="{Binding test}" />
-        </StackLayout>
+        <ListView x:Name="listView" SeparatorVisibility="None" HasUnevenRows="True" VerticalOptions="FillAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <controls:AdvertisementCell />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>

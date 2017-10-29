@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using AddStop.Views;
 using Xamarin.Forms;
 
 namespace AddStop
@@ -13,7 +13,7 @@ namespace AddStop
 		{
 			InitializeComponent();
 
-			MainPage = new AddStop.Home();
+			MainPage = new LoginView();
 		}
 
 		protected override void OnStart ()

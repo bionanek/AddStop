@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AddStop.CustomControlls.AdvertisementCell">
+    <ViewCell.View>
+        <ContentView Margin="10,10,10,20" BackgroundColor="#f0e7a2" Opacity="0.8">
+            <ContentView Margin="10">
+                <Grid RowSpacing="5" ColumnSpacing="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="165"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" RowSpacing="5" ColumnSpacing="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image BackgroundColor="White" Grid.Column="0" Aspect="AspectFill" Source="{Binding src}" HeightRequest="165"/>
+                        <StackLayout Grid.Column="1" >
+                            <StackLayout BackgroundColor="White" Padding="5">
+                            <Label Text="Where:" FontSize="10" TextColor="Black"/>
+                            <Label Text="{Binding Place}" HorizontalTextAlignment="Center" FontSize="16"  TextColor="Black"/>
+                            </StackLayout>
+                            <StackLayout BackgroundColor="White" Padding="5">
+                            <Label Text="When:" FontSize="10" TextColor="Black"/>
+                                <Label Text="{Binding When}" HorizontalTextAlignment="Center" FontSize="16"  TextColor="Black"/>
+                        </StackLayout>
+                            <Grid RowSpacing="5" ColumnSpacing="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0" BackgroundColor="White" Padding="5">
+                                <Label Text="Required people:" FontSize="10" TextColor="Black"/>
+                                    <Label Text="{Binding NumberOfPeople}" HorizontalTextAlignment="Center"  HorizontalOptions="StartAndExpand" FontSize="16"  TextColor="Black"/>
+                            </StackLayout>
+                                <StackLayout Grid.Column="1" BackgroundColor="White" Padding="5">
+                                <Label Text="Required sex:" FontSize="10" TextColor="Black" />
+                                    <Label Text="{Binding RequiredSex}" HorizontalTextAlignment="Center"  HorizontalOptions="StartAndExpand" FontSize="16"  TextColor="Black"/>
+                            </StackLayout>
+                        </Grid>
+                        </StackLayout>
+                    </Grid>
+                    <StackLayout Grid.Row="1" Spacing="5">
+                        <StackLayout BackgroundColor="White" Padding="5">
+                        <Label Text="Description:" FontSize="10" TextColor="Black"/>
+                            <Label Text="{Binding Content}" HorizontalTextAlignment="Start" FontSize="16"  TextColor="Black"/>
+                    </StackLayout>
+                        <Grid RowSpacing="5" ColumnSpacing="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0" BackgroundColor="White" Padding="5">
+                            <Label Text="Required age:" FontSize="10" TextColor="Black"/>
+                                <Label Text="{Binding RequiredAge}" HorizontalTextAlignment="Center"  FontSize="16"  TextColor="Black"/>
+                        </StackLayout>
+                            <Button  Text="Sign in" Grid.Column="1" FontSize="24"  TextColor="White" BackgroundColor="#167C5D"/>
+                        </Grid>
+                    </StackLayout>
+                </Grid>
+            </ContentView>
+        </ContentView>
+    </ViewCell.View>
+</ViewCell>

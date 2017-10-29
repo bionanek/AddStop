@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace AddStop.Views
+namespace AddStop.CustomControlls
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ArichivesView : ContentPage
+	public partial class AdvertisementCell : ViewCell
 	{
-		public ArichivesView ()
+		public AdvertisementCell ()
 		{
 			InitializeComponent ();
 		}
