@@ -4,22 +4,13 @@ using System.Text;
 
 namespace AddStop.Models
 {
-    class User
+    public class User
     {
-        private string _login;
-
-        public string login
-        {
-            get { return _login; }
-            set { _login = value; }
-        }
-
-        private string _password;
-
-        public string password
-        {
-            get { return _password; }
-            set { _password = value; }
-        }
+        public long Id { get; set; }
+        public string login { get; set; }
+        public string password { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public double Rating { get; set; }
     }
 }

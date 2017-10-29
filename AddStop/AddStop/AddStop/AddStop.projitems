@@ -16,6 +16,9 @@
       <DependentUpon>AdvertisementCell.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\AdvertState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\Sex.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Advertisement.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AdvertisementsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ArchivesViewModel.cs" />
