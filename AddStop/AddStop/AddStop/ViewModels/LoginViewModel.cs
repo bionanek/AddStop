@@ -103,7 +103,7 @@ namespace AddStop.ViewModels
                     {
                         if (opacity >= 1.0)
                         {
-                            await Navigation.PushModalAsync(new Home());
+                            await Navigation.PushModalAsync(new Home(Navigation));
                         }
                     }
                     catch (Exception ex)

@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using Xamarin.Forms;
 
 namespace AddStop.ViewModels
 {
     class AdvertisementsViewModel : INotifyPropertyChanged
     {
-        public AdvertisementsViewModel()
+        private INavigation Navigation { get; set; }
+        public AdvertisementsViewModel(INavigation nav)
         {
+            this.Navigation = nav;
             test = "test";
         }
 

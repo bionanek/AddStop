@@ -4,13 +4,7 @@
              x:Class="AddStop.Views.AdvertisementsView"
              Title="Advertisements"
              xmlns:viewModel="clr-namespace:AddStop.ViewModels">
-    <ContentPage.BindingContext>
-        <viewModel:AdvertisementsViewModel/>
-    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="this is advertisements page"/>
-            <Label Text="{Binding test}" />
-        </StackLayout>
+        <ListView></ListView>
     </ContentPage.Content>
 </ContentPage>
