@@ -50,10 +50,12 @@ namespace AddSpot_API.Controllers
                 return NotFound();
             }
 
-            currentSurvey.Answer = updatedSurvey.Answer;
             currentSurvey.Date = updatedSurvey.Date;
             currentSurvey.Id = updatedSurvey.Id;
             currentSurvey.IdPersonType = updatedSurvey.IdPersonType;
+            currentSurvey.UserID = updatedSurvey.UserID;
+            currentSurvey.Question = updatedSurvey.Question;
+            
 
             _context.Surveys.Update(currentSurvey);
             _context.SaveChanges();

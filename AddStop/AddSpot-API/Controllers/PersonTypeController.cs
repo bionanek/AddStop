@@ -90,6 +90,5 @@ namespace AddSpot_API.Controllers
 
             return new NoContentResult();
         }
-
     }
 }

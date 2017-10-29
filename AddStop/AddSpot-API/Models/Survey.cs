@@ -9,7 +9,9 @@ namespace AddSpot_API.Models
     public class Survey
     {
         public long Id { get; set; }
-        public bool Answer { get; set; }
+        public User UserID { get; set; }
+        //public Questions QuestionID { get; set; }
+        public Dictionary<long, bool> Question { get; set; }
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
