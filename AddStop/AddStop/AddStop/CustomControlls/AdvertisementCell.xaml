@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AddStop.CustomControlls.AdvertisementCell">
+  <ViewCell.View>
+      <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Aspect="AspectFill" Source=""/>
+                    <StackLayout Grid.Column="1">
+                        <Label HorizontalOptions="CenterAndExpand"/>
+                        <Label HorizontalOptions="CenterAndExpand"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0"/>
+                            <Label Grid.Column="1"/>
+                        </Grid>
+                    </StackLayout>
+                </Grid>
+                <StackLayout Grid.Row="1">
+                    <Label />
+                </StackLayout>
+            </Grid>
+      </StackLayout>
+  </ViewCell.View>
+</ViewCell>
