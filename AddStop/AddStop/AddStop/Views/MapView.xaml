@@ -11,7 +11,6 @@
         <StackLayout>
             <Label Text="this is map page" />
             <Label Text="{Binding test}" />
-
             <maps:Map
             x:Name="MyMap"
             IsShowingUser="true"

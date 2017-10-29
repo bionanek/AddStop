@@ -7,7 +7,7 @@
             <ContentView Margin="10">
                 <Grid RowSpacing="5" ColumnSpacing="5">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="185"/>
+                        <RowDefinition Height="165"/>
                         <RowDefinition Height="2*"/>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0" RowSpacing="5" ColumnSpacing="5">
@@ -15,7 +15,7 @@
                             <ColumnDefinition Width="2*"/>
                             <ColumnDefinition Width="3*"/>
                         </Grid.ColumnDefinitions>
-                        <Image BackgroundColor="White" Grid.Column="0" Aspect="AspectFit" Source="{Binding src}" HeightRequest="155"/>
+                        <Image BackgroundColor="White" Grid.Column="0" Aspect="AspectFill" Source="{Binding src}" HeightRequest="165"/>
                         <StackLayout Grid.Column="1" >
                             <StackLayout BackgroundColor="White" Padding="5">
                             <Label Text="Where:" FontSize="10" TextColor="Black"/>
@@ -44,7 +44,7 @@
                     <StackLayout Grid.Row="1" Spacing="5">
                         <StackLayout BackgroundColor="White" Padding="5">
                         <Label Text="Description:" FontSize="10" TextColor="Black"/>
-                            <Label Text="{Binding Content}" HorizontalTextAlignment="Center"  HorizontalOptions="StartAndExpand" FontSize="16"  TextColor="Black"/>
+                            <Label Text="{Binding Content}" HorizontalTextAlignment="Start" FontSize="16"  TextColor="Black"/>
                     </StackLayout>
                         <Grid RowSpacing="5" ColumnSpacing="5">
                             <Grid.ColumnDefinitions>
@@ -55,7 +55,7 @@
                             <Label Text="Required age:" FontSize="10" TextColor="Black"/>
                                 <Label Text="{Binding RequiredAge}" HorizontalTextAlignment="Center"  FontSize="16"  TextColor="Black"/>
                         </StackLayout>
-                        <Button Text="Sign in" Grid.Column="1" FontSize="20"  TextColor="Black"/>
+                        <Button Text="Sign in" Grid.Column="1" FontSize="24"  TextColor="Black" BackgroundColor="White"/>
                         </Grid>
                     </StackLayout>
                 </Grid>
